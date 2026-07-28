@@ -71,25 +71,25 @@ const array = [
 
 const books = [
   {
-  title: 'Война и Мир',
-  author: 'Л.Н.Толстой',
-  year: 1869,
-  color: 'Желтый',
-  genre: 'Роман-эпопея'
+    title: 'Война и Мир',
+    author: 'Л.Н.Толстой',
+    year: 1869,
+    color: 'Желтый',
+    genre: 'Роман-эпопея'
   },
   {
-  title: '1984',
-  author: 'Дж. Оруэлл',
-  year: 1949,
-  color: 'Красный',
-  genre: 'Роман-антиутопия'
+    title: '1984',
+    author: 'Дж. Оруэлл',
+    year: 1949,
+    color: 'Красный',
+    genre: 'Роман-антиутопия'
   },
   {
-  title: 'Палата №6',
-  author: 'А.П.Чехов',
-  year: 1892,
-  color: 'Белый',
-  genre: 'Повесть'
+    title: 'Палата №6',
+    author: 'А.П.Чехов',
+    year: 1892,
+    color: 'Белый',
+    genre: 'Повесть'
   }
 ];
 
@@ -107,25 +107,25 @@ console.log(books);
 
 const kotaroIsaka = [
   {
-  title: 'Топор Богомола',
-  author: 'Котаро Исака',
-  year: 2017,
-  color: 'Красный',
-  genre: 'Роман'
+    title: 'Топор Богомола',
+    author: 'Котаро Исака',
+    year: 2017,
+    color: 'Красный',
+    genre: 'Роман'
   },
   {
-  title: 'Поезд убийц',
-  author: 'Котаро Исака',
-  year: 2010,
-  color: 'Серый',
-  genre: 'Роман'
+    title: 'Поезд убийц',
+    author: 'Котаро Исака',
+    year: 2010,
+    color: 'Серый',
+    genre: 'Роман'
   },
   {
-  title: 'Кузнечик',
-  author: 'Котаро Исака',
-  year: 2015,
-  color: 'Желтый',
-  genre: 'Роман'
+    title: 'Кузнечик',
+    author: 'Котаро Исака',
+    year: 2015,
+    color: 'Желтый',
+    genre: 'Роман'
   }
 ];
 
@@ -137,9 +137,7 @@ console.log(combineBooks);
 
 
 const addRareProperty = (booksArray) => 
-  booksArray.map(
-    book => 
-      ({
+  booksArray.map(book => ({
       ...book,
       isRare: book.year > 2000
   }));
