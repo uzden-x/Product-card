@@ -1,3 +1,5 @@
+import { commentsData } from "./comments.js";
+
 // Задание 2 - массив чисел и фильрация
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -30,8 +32,6 @@ console.log(reverseArray(videoGames));
 
 // Задание 6 - внедрение константы из файла comments.js
 
-import { commentsData } from "./comments.js";
-
 console.log('Задание №6 - импорт константы из другого модуля', commentsData);
 
 // Задание 7 - вывод в консоль элементы, содержащие .com
@@ -57,12 +57,12 @@ console.log('Задание №9 - Перебор массива по айди �
 
 // Задание 10 - добавляем свойство isInvalid
 
-const invalidProperty = commentsData.map(comment => ({
+const validatedComments = commentsData.map(comment => ({
   ...comment,
   isInvalid: comment.body.length > 180
 }));
 
-console.log('Задание №9 - Добавляем свойство isInvalid', invalidProperty);
+console.log('Задание №9 - Добавляем свойство isInvalid', validatedComments);
 
 // Задание 11 - использовать метод массива reduce (было сложно, без ИИ не смог справиться)
 
