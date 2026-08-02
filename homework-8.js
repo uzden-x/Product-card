@@ -24,10 +24,10 @@ const userCar = {
   transmission: 'manual',
 };
 
-userCar.name = user;
+userCar.name = user.name;
 
 console.log(userCar);
-console.log(userCar.name.name);
+console.log(userCar.name);
  
 // 5. Проверка наличия свойства максимальной скорости
 
@@ -48,9 +48,9 @@ console.log("Обновление данных о машине:", userCar);
 
 function getObjectProperty(object, property) {
   if (object[property] !== undefined) {
-    console.log(`Значение свойства "${property}":`, object[property]); // Исправлено: добавлены обратные кавычки
+    console.log(`Значение свойства "${property}":`, object[property]); 
   } else {
-    console.log(`Свойство "${property}" не найдено в объекте.`); // Исправлено: добавлены обратные кавычки
+    console.log(`Свойство "${property}" не найдено в объекте.`); 
   }
 };
 
@@ -60,12 +60,13 @@ getObjectProperty(userCar, 'brand');
 // 7. Создание массива с продуктами
 
 const array = [
-  'Milk',,
+  'Milk',
   'Bread',
   'Butter',
   'Juice',
   'Meat'
 ];
+
 
 // 8. Массивы с книгами
 
