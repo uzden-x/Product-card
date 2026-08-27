@@ -1,0 +1,65 @@
+// Уровень 1
+
+const formEmail = document.querySelector('#formEmail')
+formEmail.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const formData = new FormData(formEmail);
+  const data = Object.fromEntries(formData.entries());
+  console.log(data);
+});
+
+// Уровень 2
+
+
+let user;
+
+const modal = document.querySelector('.modal')
+const openBtn = document.querySelector('.modal-btn')
+const closeBtn = document.querySelector('.close-button')
+const regForm = document.getElementById('regForm')
+const overlay = document.querySelector('.overlay')
+
+function closeModal() {
+  modal.classList.remove('modal-showed');
+  regForm.reset();
+};
+
+openBtn.addEventListener('click', () =>{
+  modal.classList.add('modal-showed')
+});
+
+closeBtn.addEventListener('click', closeModal);
+
+regForm.addEventListener('submit', (event) =>{
+  event.preventDefault();
+
+  const password = regForm.password.value;
+  const confirmPassword = regForm.confirmPassword.value;
+
+  if (!regForm.checkValidity()) {
+    alert('Пожалуйста, заполните все поля корректно');
+    return;
+  };
+
+
+  if (password !== confirmPassword) {
+    alert('Пароли не совпадают!');
+    return;
+  };
+
+  const userData = {
+    firstName: regForm.firstName.value,
+    surName: regForm.surName.value,
+    birthDate: regForm.birthDate.value,
+    login: regForm.login.value,
+    password: regForm.password.value,
+    createdOn: new Date()
+  };
+
+  user = userData;
+
+  console.log('Регистрация успешна! Данные пользователя:', user);
+
+  closeModal();
+});
+
