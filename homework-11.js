@@ -47,16 +47,10 @@ regForm.addEventListener('submit', (event) =>{
     return;
   };
 
-  const userData = {
-    firstName: regForm.firstName.value,
-    surName: regForm.surName.value,
-    birthDate: regForm.birthDate.value,
-    login: regForm.login.value,
-    password: regForm.password.value,
-    createdOn: new Date()
-  };
+  const userData = new FormData(regForm)
+  const userData2 = Object.fromEntries(userData.entries())
 
-  user = userData;
+  user = userData2;
 
   console.log('Регистрация успешна! Данные пользователя:', user);
 
