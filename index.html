@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="гель, мусс, шампунь" >
-  <meta name="author" content="uzden_x">
-  <meta
-  name="description"
-  content="Магазин средств для кожи"
->
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="гель, мусс, шампунь" >
+    <meta name="author" content="uzden_x">
+    <meta
+    name="description"
+    content="Магазин средств для кожи"
+  >
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="modal.css">
+  </head>
 
   <body>
     <img class="background-image" src="images/bg-flowers.png" alt="Фон с цветочками" width="790" height="697">
@@ -46,8 +48,56 @@
         </li>
       </template>
 
+      <footer class="product-footer">
+        <div class="footer__up">
+          <div class="footer__description">
+            <p class="footer__title">Product cards</p>
+            <p class="footer__text">У нас самые лучшие продукты для кожи</p>
+            <div class="footer__icons">
+              <a href=""><img src="images/tg.png" alt="telegramIcon" width="21" height="18"></a>
+              <a href=""><img src="images/vk.png" alt="vkIcon" width="24" height="24"></a>
+            </div>
+              <button class="modal-btn">Регистрация</button>
+          </div>
+          <form class="footer__form" action="" id="formEmail">
+            <label class="footer__lbl" for="formInput"> Подпишись на наши акции:</label>
+            <div class="footer__input-background">
+              <input class="footer__input" placeholder="Введи свой email..." name="userEmail" type="email" id="formInput" required>
+              <button class="footer__btn" type="submit">Подписаться</button>
+            </div>
+          </form>
+          <nav class="footer__nav">
+            <p class="nav__description">Быстрые ссылки</p>
+            <ul class="nav__compound">  
+              <li><a href="">Главная</a></li>
+              <li><a href="">Магазин</a></li>
+              <li><a href="">Контакты</a></li>
+            </ul>
 
+          </nav>
+        </div>
+        <hr class="footer__divider">
+        <div class="footer__down">
+          <span>www.product-cards.com©all right reserve</span>
+        </div>
+      </footer>
 
+      <div class="modal" id="modal">
+        <div class="overlay"></div>
+        <div class="modal-content">
+          <button class="close-button">&times;</button>
+          <h2>Регистрация</h2>
+          <form id="regForm" class="reg-form">
+            <input type="text" placeholder="Имя" name="firstName" required>
+            <input type="text" placeholder="Фамилия" name="surName" required>
+            <input type="date" placeholder="Дата рождения" name="birthDate" required>
+            <input type="text" placeholder="Логин" name="login" required>
+            <input type="password" placeholder="Пароль" name="password" required>
+            <input type="password" placeholder="Повторите пароль" name="confirmPassword" required>
+            <button type="submit" class="submit-btn">Зарегистрироваться</button>
+          </form>
+        </div>
+      </div>
 
       
     </main>
@@ -55,7 +105,8 @@
     <script src="main.js"></script>  
     <script src="homework-8.js"></script> 
     <script src="homework-9.js" type="module"></script> -->
-    <script src="homework-10.js" type="module"></script> 
+    <script src="homework-10.js" type="module"></script>  
+    <script src="homework-11.js" type="module"></script>
     <script src="comments.js" type="module"></script>
   </body>
 
