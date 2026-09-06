@@ -1,3 +1,4 @@
+
 // Температура в Москве
 
 function showCityTemperature(x='Москве', y='25') {
